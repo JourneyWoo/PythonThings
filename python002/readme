@@ -1,0 +1,4 @@
+第 0002 题：将 0001 题生成的 200 个激活码（或者优惠券）保存到 MySQL 关系型数据库中。
+1.pymysql instead of the mysqldb(I cannot install successfully...Question is here:https://stackoverflow.com/questions/44343133/pip-install-mysql-python-command-python-setup-py-egg-info-failed-with-error-c)
+2.import sys
+sys.path.insert(0, '//Users/wuzhenglin/Python_nice/python100/python001')
