@@ -1,0 +1,3 @@
+**第 0004 题：**任一个英文的纯文本文件，统计其中的单词出现的个数。
+1.with open(file_name, 'r') as f
+2.query_word = raw_input("Please enter the word you want to query:\n")
