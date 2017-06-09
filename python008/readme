@@ -1,2 +1,16 @@
-goose 和 lmxl 都没弄成，可能是 package 太多了，装乱了
-看一下虚拟环境的用法吧
+第 0008 题：一个HTML文件，找出里面的正文。
+1.第一次 goose 没有装好
+这是步骤：
+git clone https://github.com/grangier/python-goose.git
+cd python-goose
+pip install -r requirements.txt
+python setup.py install
+
+2.
+from goose import Goose
+from goose.text import StopWordsChinese
+3.
+g = Goose({'stopwords_class': StopWordsChinese})
+4.
+article = g.extract(url = url)
+article.cleaned_text
