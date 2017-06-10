@@ -1,0 +1,12 @@
+使用 Python 生成验证码图片
+1.涉及函数：from PIL import Image, ImageDraw, ImageFont, ImageFilter
+2.
+先从001里截取四个随机 code 作为验证码
+然后放在图片里，其中涉及给字体加颜色和给图片背景加颜色
+然后给图片加 noise，方式：
+在图片随机加几千个小点点
+然后image.filter(ImageFilter.BLUR)滤波器，处理之后图像想的模糊
+3.save 存存
+**************************遇到了问题**************************
+一开始是import Image, ImageDraw, ImageFont, ImageFilter，提示keyError
+上网找，处理方式是改成from PIL import Image, ImageDraw, ImageFont, ImageFilter
