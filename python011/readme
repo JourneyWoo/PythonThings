@@ -1,0 +1,22 @@
+ 敏感词文本文件 filtered_words.txt，里面的内容为以下内容，当用户输入敏感词语时，则打印出 Freedom，否则打印出 Human Rights。
+ 
+ 遇到两个问题：
+ 1. with open(filename, 'r', encoding='utf-8',) as f:
+ ------> 'encoding' is an invalid keyword argument for this function
+ 
+ 解决：
+ import io
+ with io.open(filename, 'r', encoding='utf-8',) as f:
+ 
+ 2.raw_input 的时候总是不能读取键盘的输入，上网找清除键盘缓存的 code 没找到--
+ 。。。。好吧找到了https://stackoverflow.com/questions/26555070/linux-python-clear-input-buffer-before-raw-input：
+ from termios import tcflush, TCIFLUSH
+ 和
+ tcflush(sys.stdin, TCIFLUSH)
+ 但是报错一直成功不了。。。
+ 
+ 所以解决：
+ raw_iput 换成 input
+ 但是注意输入的时候，比如：
+ raw_input（周杰伦）
+ input（'周杰伦'）
