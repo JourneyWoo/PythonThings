@@ -9,7 +9,7 @@
  with io.open(filename, 'r', encoding='utf-8',) as f:
  
  2.raw_input 的时候总是不能读取键盘的输入，上网找清除键盘缓存的 code 没找到--
- 。。。。好吧找到了https://stackoverflow.com/questions/26555070/linux-python-clear-input-buffer-before-raw-input：
+ 。。。。好吧其实是找到了https://stackoverflow.com/questions/26555070/linux-python-clear-input-buffer-before-raw-input：
  from termios import tcflush, TCIFLUSH
  和
  tcflush(sys.stdin, TCIFLUSH)
